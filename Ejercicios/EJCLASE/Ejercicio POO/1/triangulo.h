@@ -15,7 +15,7 @@ public:
 
     // Métodos
     void inicializar(double l1, double l2, double l3);
-    void imprimirLadoMayor();
+    int imprimirLadoMayor();
     void esEquilatero();
 };
 

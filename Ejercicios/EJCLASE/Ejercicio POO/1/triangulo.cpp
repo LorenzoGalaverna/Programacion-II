@@ -15,13 +15,13 @@ void Triangulo::inicializar(double l1, double l2, double l3) {
     lado3 = l3;
 }
 
-void Triangulo::imprimirLadoMayor() {
+int Triangulo::imprimirLadoMayor() {
     double mayor = lado1;
     if (lado2 > mayor)
         mayor = lado2;
     if (lado3 > mayor)
         mayor = lado3;
-    std::cout << "El lado mayor es: " << mayor << std::endl;
+    return mayor;
 }
 
 void Triangulo::esEquilatero() {

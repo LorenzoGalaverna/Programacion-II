@@ -18,7 +18,7 @@ int main() {
 
     triangulo.inicializar(l1, l2, l3);
 
-    triangulo.imprimirLadoMayor();
+    std::cout << triangulo.imprimirLadoMayor() + "Es el lado mayor";
     triangulo.esEquilatero();
 
     return 0;
