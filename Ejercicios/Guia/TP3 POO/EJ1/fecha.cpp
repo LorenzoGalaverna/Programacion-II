@@ -1,32 +1,64 @@
-// Desarrollar un programa que cargue los lados de un triángulo e
-// implemente los siguientes métodos: inicializar los atributos, imprimir el
-// valor del lado mayor y otro método que muestre si es equilátero o no.
-
-#include "triangulo.h"
+#include "fecha.h"
 #include <iostream>
+using namespace std;
 
-Triangulo::Triangulo() {
-    lado1 = lado2 = lado3 = 0.0;
+Fecha::Fecha(int d, int m, int a) : dia(d), mes(m), anio(a) {}
+
+Fecha::Fecha() : dia(1), mes(1), anio(1900) {}
+
+int Fecha::getDia(){
+    return dia;
+}
+int Fecha::getMes(){
+    return mes;
+}
+int Fecha::getAnio(){
+    return anio;
 }
 
-void Triangulo::inicializar(double l1, double l2, double l3) {
-    lado1 = l1;
-    lado2 = l2;
-    lado3 = l3;
+Fecha Fecha::operator++() {
+    if (dia < 31) {
+        ++dia;
+    } else {
+        dia = 1;
+        if (mes < 12) {
+            ++mes;
+        } else {
+            mes = 1;
+            ++anio;
+        }
+    }
+    return *this;
 }
 
-int Triangulo::imprimirLadoMayor() {
-    double mayor = lado1;
-    if (lado2 > mayor)
-        mayor = lado2;
-    if (lado3 > mayor)
-        mayor = lado3;
-    return mayor;
+Fecha Fecha::operator--() {
+    if (dia > 1) {
+        --dia;
+    } else {
+        if (mes > 1) {
+            --mes;
+            dia = 31; // Suponiendo que todos los meses tienen 31 días
+        } else {
+            --anio;
+            mes = 12;
+            dia = 31;
+        }
+    }
+    return *this;
 }
 
-void Triangulo::esEquilatero() {
-    if (lado1 == lado2 && lado2 == lado3)
-        std::cout << "El triangulo es equilátero." << std::endl;
-    else
-        std::cout << "El triangulo no es equilátero." << std::endl;
+Fecha Fecha::operator+(int dias) {
+    Fecha nuevaFecha(*this);
+    for (int i = 0; i < dias; ++i) {
+        ++nuevaFecha;
+    }
+    return nuevaFecha;
+}
+
+Fecha Fecha::operator-(int dias) {
+    Fecha nuevaFecha(*this);
+    for (int i = 0; i < dias; ++i) {
+        --nuevaFecha;
+    }
+    return nuevaFecha;
 }

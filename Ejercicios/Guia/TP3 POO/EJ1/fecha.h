@@ -1,18 +1,15 @@
-// Desarrollar un programa que cargue los lados de un triángulo e
-// implemente los siguientes métodos: inicializar los atributos, imprimir el
-// valor del lado mayor y otro método que muestre si es equilátero o no.
-#define CLASE_H
-
-class Triangulo {
+class Fecha {
 private:
-    double lado1, lado2, lado3;
+    int dia, mes, anio;
 
 public:
-    // Constructor
-    Triangulo();
-
-    // Métodos
-    void inicializar(double l1, double l2, double l3);
-    int imprimirLadoMayor();
-    void esEquilatero();
+    Fecha(int d, int m, int a);
+    Fecha();
+    int getDia();
+    int getMes();
+    int getAnio();
+    Fecha operator++();
+    Fecha operator--();
+    Fecha operator+(int dias);
+    Fecha operator-(int dias);
 };

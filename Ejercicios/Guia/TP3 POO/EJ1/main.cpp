@@ -1,25 +1,30 @@
-// Desarrollar un programa que cargue los lados de un triángulo e
-// implemente los siguientes métodos: inicializar los atributos, imprimir el
-// valor del lado mayor y otro método que muestre si es equilátero o no.
+/*
+Realizar una clase que permita representar una fecha.
+ Definir los datos miembros de la clase.
+ Definir si fuera necesario funciones de carga y muestra de los datos miembro.
+ Definir un constructor que inicializa la fecha a una fecha dada.
+ Definir un constructor que inicializa la fecha en 01/01/1900.
+ Definir sobrecargas de los siguientes operadores:
+o ++ y – incrementa o decrementa la fecha en 1 día.
+o + y – suma a una fecha un cierto número de días.
+ Realizar un programa principal que haga uso de la clase
+*/
 
-#include "triangulo.h"
+#include "fecha.h"
 #include <iostream>
+using namespace std;
 
 int main() {
-    Triangulo triangulo;
-    double l1, l2, l3;
+    Fecha fecha1(9, 12, 2018);
+    cout << fecha1.getDia() << "/" << fecha1.getMes() << "/" << fecha1.getAnio() << endl;
 
-    std::cout << "Ingrese el primer lado del triangulo: ";
-    std::cin >> l1;
-    std::cout << "Ingrese el segundo lado del triangulo: ";
-    std::cin >> l2;
-    std::cout << "Ingrese el tercer lado del triangulo: ";
-    std::cin >> l3;
+    ++fecha1;
+    cout << fecha1.getDia() << "/" << fecha1.getMes() << "/" << fecha1.getAnio() << endl;
 
-    triangulo.inicializar(l1, l2, l3);
-
-    std::cout << triangulo.imprimirLadoMayor() + "Es el lado mayor";
-    triangulo.esEquilatero();
-
+    Fecha fecha2;
+    cout << fecha2.getDia() << "/" << fecha2.getMes() << "/" << fecha2.getAnio() << endl;
+    
+    fecha2 = fecha2 + 33;
+    cout << fecha2.getDia() << "/" << fecha2.getMes() << "/" << fecha2.getAnio() << endl;
     return 0;
 }
