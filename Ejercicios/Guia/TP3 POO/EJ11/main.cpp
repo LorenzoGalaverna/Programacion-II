@@ -1,3 +1,16 @@
+/*
+Crear una clase conjunto que represente un conjunto de números enteros. El
+conjunto tiene un tamaño máximo y un cierto número de elementos. Considerar
+que en un conjunto no puede haber elementos repetidos. Definir los constructores
+que considere necesario, destructor y sobrecarga del operador de asignación.
+Definir los siguientes métodos y sobrecargas:
+ Agregar: inserta un elemento al conjunto.
+ Eliminar: elimina un elemento del conjunto.
+ Mostrar: Imprimir los elementos del conjunto.
+ Sobrecargar el operador + para realizar la Union de conjuntos.
+ Sobrecargar el operador * para realizar la intersección de conjuntos
+ Sobrecargar el operador - para realizar la diferencia de conjuntos.
+*/
 #include "Conjunto.h"
 
 int main() {

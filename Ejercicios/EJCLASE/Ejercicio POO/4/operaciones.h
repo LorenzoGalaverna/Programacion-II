@@ -2,9 +2,6 @@
 // valores enteros, calcular su suma, resta, multiplicación y
 // división, cada una en un método, imprimir dichos resultados. 
 
-#ifndef OPERACIONES_H
-#define OPERACIONES_H
-
 class Operaciones {
 private:
     int valor1;
@@ -23,5 +20,3 @@ public:
     int calcularMultiplicacion();
     double calcularDivision();
 };
-
-#endif

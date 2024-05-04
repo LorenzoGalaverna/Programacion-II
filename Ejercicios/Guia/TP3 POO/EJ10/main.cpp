@@ -1,3 +1,13 @@
+/*
+ Construir la clase Matriz que permita representar un arreglo bidimensional de
+enteros. Obtener las siguientes sobrecargas:
+ Operador + para sumar dos Matrices.
+ Operador – para restar dos Matrices.
+ Operador * para calcular el producto de 2 Matrices.
+ Operador () para subindicar cada elemento de la matriz.
+ Operador [] para subindicar los elementos de la diagonal principal
+Realizar un programa principal que haga uso de la clase
+*/
 #include <iostream>
 #include "Matriz.h"
 

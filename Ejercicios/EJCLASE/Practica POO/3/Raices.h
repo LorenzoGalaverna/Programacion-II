@@ -1,6 +1,3 @@
-#ifndef RAICES_H
-#define RAICES_H
-
 #include <string>
 
 class Raices {
@@ -25,7 +22,3 @@ public:
     double obtenerRaiz();
     std::pair<double, double> obtenerRaices();
 };
-
-
-#endif // RAICES_H
-

@@ -2,9 +2,6 @@
 // implemente los siguientes métodos: inicializar los atributos, imprimir el
 // valor del lado mayor y otro método que muestre si es equilátero o no.
 
-#ifndef CLASE_H
-#define CLASE_H
-
 class Triangulo {
 private:
     double lado1, lado2, lado3;
@@ -18,5 +15,3 @@ public:
     int imprimirLadoMayor();
     void esEquilatero();
 };
-
-#endif

@@ -3,9 +3,6 @@
 // cuadrante se encuentra dicho punto (concepto matemático, primer
 // cuadrante si x e y son positivas, si x<0 e y>0 segundo cuadrante, etc.)
 
-#ifndef PUNTO_H
-#define PUNTO_H
-
 class Punto {
 private:
     double x, y;
@@ -18,5 +15,3 @@ public:
     void cargar(double x, double y);
     void determinarCuadrante();
 };
-
-#endif

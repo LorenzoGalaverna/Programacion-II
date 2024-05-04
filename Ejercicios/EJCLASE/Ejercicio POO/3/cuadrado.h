@@ -2,9 +2,6 @@
 // los siguientes métodos: cargar el valor de su lado, imprimir
 // su perímetro y su superficie.
 
-#ifndef CUADRADO_H
-#define CUADRADO_H
-
 class Cuadrado {
 private:
     double lado;
@@ -20,5 +17,3 @@ public:
     double calcularPerimetro();
     double calcularSuperficie();
 };
-
-#endif
