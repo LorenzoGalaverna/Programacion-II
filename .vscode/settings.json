@@ -50,6 +50,9 @@
         "xutility": "cpp",
         "set": "cpp",
         "xtree": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "iomanip": "cpp",
+        "xlocmon": "cpp",
+        "xloctime": "cpp"
     }
 }
