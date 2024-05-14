@@ -1,21 +1,80 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="15.1">
-  <zoom_level>10</zoom_level>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>20</x>
-      <y>200</y>
-      <w>270</w>
-      <h>160</h>
+      <x>360</x>
+      <y>624</y>
+      <w>224</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Hora
+--
++int HH
++int MM
++int SS
+--
+-void setHora(int HH, int MM, int SS)
+-int getHH()	
+-int getMM()
+-int getSS()
+-void incrementarHora()	
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>152</y>
+      <w>224</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Temperatura
+--
++double tempC
++double tempF
++double tempK
+--
+-double getTempC()
+-double getTempF()
+-double getTempK()
+-void setTempc(double temp)
+-void setTempF(double temp)
+-void setTempK(double temp)
+-void calcularTemp(double temp)
+-void tomarTemp()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>408</y>
+      <w>216</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>Reloj
 --
-+time_t:hora
++Hora hora
++Alarma alarma
 +Temperatura temperatura
++Display display
 --
--setAlarma
--setHora ()	
+-void setHora(int HH, int MM, int SS);
+-void setAlarma(int HH, int MM, int SS);
+-void setTempC(double tempC);
+-void setTempF(double tempF);
+-void setTempK(double tempK);
+-void incrementarHora();
+-void tomarTemp();
+-void mostrarHora();  
+-void mostrarAlarma();
+-void mostrarTemperatura();
+-bool checkAlarma();
 --
 
 </panel_attributes>
@@ -24,18 +83,87 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>310</x>
-      <y>200</y>
-      <w>280</w>
-      <h>160</h>
+      <x>360</x>
+      <y>336</y>
+      <w>224</w>
+      <h>128</h>
     </coordinates>
-    <panel_attributes>Temperatura
+    <panel_attributes>Alarma
 --
-+double temperatura
++int HH
++int MM
++int SS
 --
--calcularTemperatura	
--mostrarTemperatura()
+-void setAlarma(int HH, int MM, int SS)
+-int getHH()	
+-int getMM()
+-int getSS()
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>480</y>
+      <w>224</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>Display
+--
+
+--
+-void mostrarHora(int HH, int MM, int SS)
+-void mostrarAlaarma(int HH, int MM, int SS)
+-void mostrarTemperatura(double tempC,
+double tempF, double tempK)
 --</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>256</x>
+      <y>392</y>
+      <w>120</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;70.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>208</y>
+      <w>152</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;250.0;170.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>256</x>
+      <y>480</y>
+      <w>120</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>224</x>
+      <y>616</y>
+      <w>152</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;110.0</additional_attributes>
   </element>
 </diagram>
