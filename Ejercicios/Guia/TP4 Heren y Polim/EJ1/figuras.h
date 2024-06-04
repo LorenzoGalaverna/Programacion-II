@@ -49,4 +49,4 @@ public:
     void mostrar() const override;
 };
 
-#endif // FIGURAS_H
+#endif
